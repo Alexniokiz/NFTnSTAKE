@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.title {
+    font-family: "PixelFont";
+    position: relative;
+    font-size: 180px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+}
+
+.second-title {
+    padding-left: 40px;
+    top: -55px;
+}
+
+.bar-title {
+    height: 80px;
+    background-color: #2e2e2e;
+    width: 100%;
+}
+
+.bar-text {
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    margin: auto;
+    padding: 10 5%;
+}
