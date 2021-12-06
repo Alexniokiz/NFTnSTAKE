@@ -84,8 +84,14 @@ export const connect = () => {
             await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
                 params: [{ chainId: '0x3' }], // chainId must be in hexadecimal numbers
-            });
-          dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+            }).then(() => {window.location.reload()});
+            ethereum.on("chainChanged", () => {
+                window.location.reload();
+              });
+              ethereum.on("accountsChanged", (accounts) => {
+                dispatch(updateAccount(accounts[0]));
+              });
+        //   dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
