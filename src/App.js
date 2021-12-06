@@ -1,15 +1,8 @@
 import './App.css';
-import React, {
-    useEffect,
-    useState
-} from 'react';
-
-import { useDispatch, useSelector } from "react-redux";
-import { connect } from "./redux/blockchain/blockchainActions";
-import { fetchData } from "./redux/data/dataActions";
+import React from 'react';
 
 import NavBar from "./components/NavBar/NavBar"
-import MainGame from "./components/MainGame/MainGame"
+// import MainGame from "./components/MainGame/MainGame"
 
 const App = () => {
     return (
