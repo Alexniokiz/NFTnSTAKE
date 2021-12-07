@@ -1,4 +1,5 @@
 import './App.css';
+import './assets/fonts/font_importer.css';
 import React from 'react';
 
 import NavBar from "./components/NavBar/NavBar"

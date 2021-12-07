@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "PixelFont";
-  src: url("./assets/fonts/Lady_Radical.ttf")
-}
-
 .App {
   text-align: center;
 }
@@ -21,7 +16,7 @@
 .App-header {
   background-color: #1a6bd9;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
