@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+.home {
+    background: url("../../assets/img/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-top: 50%;
+    position: relative;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding-right: 25px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .title {
@@ -42,6 +54,7 @@
 .link-social {
     font-family: "Pixel";
     padding-right: 20px;
+    margin-right: 15px;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.08);
     color: white;
@@ -56,7 +69,6 @@
     background-color: transparent;
     outline: 0px;
     border: 0px currentcolor;
-    margin: 0px;
     cursor: pointer;
     user-select: none;
     vertical-align: middle;
@@ -75,4 +87,12 @@
 .link-social:hover {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.08);
+}
+
+.container-home {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* background: repeating-linear-gradient(rgba(0,255,76,.1),rgba(255,0,0,.1) 2px,transparent 0,transparent 4px); */
+    bottom: 0;
 }

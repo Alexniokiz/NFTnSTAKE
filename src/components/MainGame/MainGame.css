@@ -1,0 +1,9 @@
+.container-minting {
+    margin: auto;
+    padding: 150px 50px;
+    background-color: rgb(117, 117, 117);
+    border-radius: 20px;
+    max-width: 80rem;
+    background: url("../../assets/img/mint-background.jpg");
+    background-size: cover;
+}

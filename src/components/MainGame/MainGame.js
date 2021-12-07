@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { connect } from "../../redux/blockchain/blockchainActions";
 import { fetchData } from "../../redux/data/dataActions";
 
+import "./MainGame.css";
+
 const MainGame = () => {
     const dispatch = useDispatch();
     const blockchain = useSelector((state) => state.blockchain);
@@ -48,39 +50,48 @@ const MainGame = () => {
     };
 
     useEffect(() => {
-        getConfig();
-        getData();
+        // getConfig();
+        // getData();
         dispatch(connect());
     }, []);
 
     return (
-        <>
-            {blockchain.account === "" || blockchain.smartContract === null ? (
-                <>
-                    <p>Connect the MetaMask</p>
-                    <button 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            dispatch(connect());
-                            getData();
-                        }}
-                    >Connect</button>
-                    {blockchain.errorMsg !== "" ? (
-                        <>
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    color: "var(--accent-text)",
-                                }}
-                            >
-                                {blockchain.errorMsg}
-                            </p>
-                        </>
-                    ) : null}
-                </>
-                ) : (<><p>{blockchain.account}</p></>)
-            }
-        </>
+        <div>
+            <div className="container-minting">
+                <p style={{ textAlign: "center", color: "#fff", fontFamily: "Pixel" }}>Ready to Mint ?</p>
+                {blockchain.account === "" || blockchain.smartContract === null ? (
+                    <>
+                        <a
+                            onClick={(e) => {
+                                e.preventDefault();
+                                dispatch(connect());
+                                getData();
+                            }}
+                            className="button"
+                        >Connect</a>
+                        {blockchain.errorMsg !== "" ? (
+                            <>
+                                <p
+                                    style={{
+                                        textAlign: "center",
+                                        color: "#fff",
+                                    }}
+                                >
+                                    {blockchain.errorMsg}
+                                </p>
+                            </>
+                        ) : null}
+                    </>
+                    ) : (
+                    <>
+                        <p style={{color: "white", textAlign: "center", fontFamily: "Pixel"}}>
+                            {blockchain.account}
+                        </p>
+                    </>
+                    )
+                }
+            </div>
+        </div>
     )
 }
 
